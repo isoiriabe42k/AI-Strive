@@ -1,0 +1,37 @@
+text = """How much wood would a woodchuck chuck
+If a woodchuck could chuck wood?
+He would chuck, he would, as much as he could,
+And chuck as much as a woodchuck would
+If a Mr. Smith could chuck wood\n\r\t."""
+
+text[text.find("how")+1 : text.find("t.")]
+
+#Wood_word= text.find("wood")
+#print(Wood_word)
+
+# read whole text
+# create a counter
+x= text.split()
+y= len(text)
+print(x)
+print(y)
+# get rid \n
+# get rid of ?. special grammar
+special_grammar = """,?."""
+
+no_special_grammar = ''
+for char in text:
+   if char not in special_grammar:
+       no_special_grammar = no_special_grammar + char
+
+print(no_special_grammar)
+
+# lowercase my sentence
+lower_text= no_special_grammar.lower()
+print(lower_text)
+# split the string by some character
+s_text= lower_text.split()
+print(s_text)
+#find wood and count
+to_find= "wood"
+s_text.count("wood")
